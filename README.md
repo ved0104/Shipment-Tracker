@@ -29,8 +29,6 @@ Ensure you have the following installed:
 
     bash
 
-    CopyEdit
-
     `git clone <repository-url>
     cd <repository-name>/backend`
 
@@ -38,15 +36,11 @@ Ensure you have the following installed:
 
     bash
 
-    CopyEdit
-
     `npm install`
 
 3.  **Set up environment variables:** Create a `.env` file in the backend directory with the following variables:
 
     env
-
-    CopyEdit
 
     `PORT=5000
     MONGODB_URI=<your-mongodb-uri>   # MongoDB connection URI`
@@ -55,15 +49,11 @@ Ensure you have the following installed:
 
     env
 
-    CopyEdit
-
     `MONGODB_URI=mongodb://localhost:27017/shipment_tracker`
 
 4.  **Start the backend server:** Run the following command to start the backend server:
 
     bash
-
-    CopyEdit
 
     `npm start`
 
@@ -77,8 +67,6 @@ Ensure you have the following installed:
 
     bash
 
-    CopyEdit
-
     `git clone <repository-url>
     cd <repository-name>/frontend`
 
@@ -86,23 +74,17 @@ Ensure you have the following installed:
 
     bash
 
-    CopyEdit
-
     `npm install`
 
 3.  **Set up environment variables:** If your frontend communicates with an API that requires an environment variable (e.g., backend URL), create a `.env` file in the frontend directory:
 
     env
 
-    CopyEdit
-
     `REACT_APP_API_URL=http://localhost:5000/api`
 
 4.  **Start the frontend server:** Run the following command to start the frontend server:
 
     bash
-
-    CopyEdit
 
     `npm start`
 
