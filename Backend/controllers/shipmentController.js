@@ -1,7 +1,6 @@
 const Shipment = require('../models/shipment')
 const GEOCODING_API_KEY = process.env.GEOCODING_API_KEY
 const axios = require('axios')
-// Convert city name to coordinates
 const getCoordinates = async (city) => {
     try {
         const response = await axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${city}&key=${GEOCODING_API_KEY}`);

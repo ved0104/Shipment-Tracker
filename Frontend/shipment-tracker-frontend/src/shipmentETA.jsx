@@ -5,23 +5,25 @@ const ShipmentETA = ({ id }) => {
     const [eta, setEta] = useState(null);
 
     useEffect(() => {
-        console.log("Shipment ID:", id); 
-        if (!id) {
-            console.error("Invalid shipment ID");
+        if (!id || !/^[0-9a-fA-F]{24}$/.test(id)) {
+            console.error("Invalid shipment ID format");
             return;
         }
-    
+
         const fetchETA = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/shipment/${id}/eta`);
+                const response = await axios.get(
+                    `http://localhost:5000/api/shipment/${id}/eta`
+                );
                 setEta(response.data.eta);
             } catch (error) {
                 console.error('Error fetching ETA:', error);
             }
         };
-    
+
         fetchETA();
     }, [id]);
+
 
     return (
         <div>

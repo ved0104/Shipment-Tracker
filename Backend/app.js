@@ -2,12 +2,10 @@ const express=require('express')
 const app=express()
 app.use(express.json());
 const path=require('path')
-const mongoose=require('mongoose')
+
 const connectDB=require('./config/db') 
 const shipmentRoutes=require('./routes/shipmentRoutes')
 app.use(express.urlencoded({ extended: true }));
-
-// const router=require('./controllers/shipmentController')
 const cors=require('cors')
 app.use(cors())
 require('dotenv').config();
